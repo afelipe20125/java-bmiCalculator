@@ -9,8 +9,8 @@ package bmi.calculator;
  *
  * @author mlarrubia
  */
-
 // Import Scanner Object
+import java.util.Scanner;
 
 public class BMICalculator {
 
@@ -19,16 +19,21 @@ public class BMICalculator {
      */
     public static void main(String[] args) {
         // Create Scanner object
-        
+        Scanner in = new Scanner(System.in);
         // Prompt for weight
-        
+        System.out.println("what is yor weight");
+        int weight = in.nextInt();
         // Prompt for height
-        
+        System.out.println("what is your height");
+        int height = in.nextInt();
         // invoke the calculateBMI method
-        
-        
+        double myBmi = calculateBmi(weight, height);
+
     }
-    
+
     // calculateBMI method definition
-    
+    public static double calculateBmi(int weight, int height) {
+
+        return (weight / height);
+    }
 }
