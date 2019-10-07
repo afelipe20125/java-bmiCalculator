@@ -28,12 +28,16 @@ public class BMICalculator {
         int height = in.nextInt();
         // invoke the calculateBMI method
         double myBmi = calculateBmi(weight, height);
+        System.out.println("your bmi is "+myBmi);
 
+    
     }
 
     // calculateBMI method definition
-    public static double calculateBmi(int weight, int height) {
-
-        return (weight / height);
+    public static double calculateBmi(int weight, int height) {        
+    
+        double myBMI = (double)(weight/ height*height);
+        return myBMI; 
+                
     }
 }
